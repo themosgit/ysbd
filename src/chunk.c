@@ -79,9 +79,13 @@ int CHUNK_GetIthRecordInChunk(CHUNK* chunk,  int i, Record* record){
 
     CHUNK_RecordIterator iterator = CHUNK_CreateRecordIterator(chunk);
     
+    record->id=-1;
+    
     for(int j = 0; j < i - 1; j++){
-        CHUNK_GetNextRecord(&iterator, NULL);
+        CHUNK_GetNextRecord(&iterator, record);
     }
+
+    record->id=0;
 
     if (CHUNK_GetNextRecord(&iterator, record) == 1) return 0;
     else return -1;
@@ -93,7 +97,10 @@ int CHUNK_UpdateIthRecord(CHUNK* chunk,  int i, Record record){
     CHUNK_RecordIterator iterator = CHUNK_CreateRecordIterator(chunk);
     int check;
 
+    record.id=-1;
+
     for(int j = 0; j < i; j++){
+       if (j==i-1) record.id=0;
        check = CHUNK_GetNextRecord(&iterator, NULL);
        if (check != 1) return -1;
     }
@@ -136,9 +143,9 @@ int CHUNK_GetNextRecord(CHUNK_RecordIterator *iterator,Record* record){
 
     BF_Block *block;
     HP_info *info;
-    BF_Block_Init(&block);
+    BF_Block_Init(&block); 
 
-    if (record == NULL) {
+    if (record->id != -1) {
         BF_GetBlock(iterator->chunk.file_desc, iterator->currentBlockId, block); 
     
         Record *rec;
