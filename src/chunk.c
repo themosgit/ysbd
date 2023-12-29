@@ -42,7 +42,7 @@ int CHUNK_GetNext(CHUNK_Iterator *iterator,CHUNK* chunk){        //προετο�
     }
 
     chunk->file_desc = iterator->file_desc;
-    chunk->from_BlockId = iterator->current;                    //ξεκιναμε απο το τρεχον μπλοκ, δεν θα πρεπε να παρει το lastblockid ωστε να ξεκινησει απο το επομενο??? οχι
+    chunk->from_BlockId = iterator->current;                    
     if (iterator->current + iterator->blocksInChunk - 1 > blinfo->lastBlockId ) {
         chunk->to_BlockId = blinfo->lastBlockId;
         chunk->blocksInChunk = blinfo->lastBlockId - chunk->from_BlockId + 1;
@@ -62,9 +62,22 @@ int CHUNK_GetNext(CHUNK_Iterator *iterator,CHUNK* chunk){        //προετο�
 
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
+CHUNK_RecordIterator CHUNK_CreateRecordIterator(CHUNK *chunk){
+
+    CHUNK_RecordIterator rec;
+
+    rec.chunk = *chunk;
+    rec.currentBlockId = chunk->from_BlockId;
+    rec.cursor = 0;
+
+    return rec;
+}
+
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
 int CHUNK_GetIthRecordInChunk(CHUNK* chunk,  int i, Record* record){
 
-    CHUNK_RecordIterator iterator = CHUNK_CreateIterator(chunk);
+    CHUNK_RecordIterator iterator = CHUNK_CreateRecordIterator(chunk);
     
     for(int j = 0; j < i - 1; j++){
         CHUNK_GetNextRecord(&iterator, NULL);
@@ -77,7 +90,7 @@ int CHUNK_GetIthRecordInChunk(CHUNK* chunk,  int i, Record* record){
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 int CHUNK_UpdateIthRecord(CHUNK* chunk,  int i, Record record){
-    CHUNK_RecordIterator iterator = CHUNK_CreateIterator(chunk);
+    CHUNK_RecordIterator iterator = CHUNK_CreateRecordIterator(chunk);
     int check;
 
     for(int j = 0; j < i; j++){
@@ -89,10 +102,10 @@ int CHUNK_UpdateIthRecord(CHUNK* chunk,  int i, Record record){
     Record *rec;
     BF_Block_Init(&block);
 
-    BF_GetBlock(chunk->file_desc, iterator->currentBlockId, block);
+    BF_GetBlock(chunk->file_desc, iterator.currentBlockId, block);
 
     rec = BF_Block_GetData(block);
-    memcpy(&rec[iterator->cursor], &record, sizeof(Record));
+    memcpy(&rec[iterator.cursor], &record, sizeof(Record));
     BF_SetDirty(block);
     BF_UnpinBlock(block);
 
@@ -102,7 +115,7 @@ int CHUNK_UpdateIthRecord(CHUNK* chunk,  int i, Record record){
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 void CHUNK_Print(CHUNK chunk){
-    CHUNK_RecordIterator iterator = CHUNK_CreateIterator(chunk);
+    CHUNK_RecordIterator iterator = CHUNK_CreateRecordIterator(&chunk);
     Record rec;
     int check = CHUNK_GetNextRecord(&iterator, &rec);
     while(check == 1){
@@ -114,18 +127,6 @@ void CHUNK_Print(CHUNK chunk){
 
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-CHUNK_RecordIterator CHUNK_CreateRecordIterator(CHUNK *chunk){
-
-    CHUNK_RecordIterator rec;
-
-    rec.chunk = *chunk;
-    rec.currentBlockId = chunk->from_BlockId;
-    rec.cursor = 0;
-
-    return rec;
-}
-
-//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 int CHUNK_GetNextRecord(CHUNK_RecordIterator *iterator,Record* record){
 
@@ -138,7 +139,7 @@ int CHUNK_GetNextRecord(CHUNK_RecordIterator *iterator,Record* record){
     BF_Block_Init(&block);
 
     if (record == NULL) {
-        BF_GetBlock(iterator->chunk.file_desc, iterator->currentBlockId, block); //δεν θα επρεπε να παιρνει blocksinchunk?? οχι
+        BF_GetBlock(iterator->chunk.file_desc, iterator->currentBlockId, block); 
     
         Record *rec;
         rec = BF_Block_GetData(block);
