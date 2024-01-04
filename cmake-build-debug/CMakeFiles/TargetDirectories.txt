@@ -1,0 +1,4 @@
+/home/a/CLionProjects/vaseis 2 ergasia 3/cmake-build-debug/CMakeFiles/edit_cache.dir
+/home/a/CLionProjects/vaseis 2 ergasia 3/cmake-build-debug/CMakeFiles/test.dir
+/home/a/CLionProjects/vaseis 2 ergasia 3/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/home/a/CLionProjects/vaseis 2 ergasia 3/cmake-build-debug/CMakeFiles/sort.dir

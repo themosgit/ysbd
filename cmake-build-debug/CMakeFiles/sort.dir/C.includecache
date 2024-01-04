@@ -1,0 +1,48 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+../include/bf.h
+
+../include/chunk.h
+stdio.h
+-
+stdlib.h
+-
+hp_file.h
+../include/hp_file.h
+
+../include/hp_file.h
+stddef.h
+-
+record.h
+../include/record.h
+bf.h
+../include/bf.h
+
+../include/merge.h
+sort.h
+../include/sort.h
+
+../include/record.h
+
+../include/sort.h
+stdbool.h
+-
+chunk.h
+../include/chunk.h
+
+/home/a/CLionProjects/vaseis 2 ergasia 3/examples/sort_main.c
+stdio.h
+-
+stdlib.h
+-
+string.h
+-
+merge.h
+/home/a/CLionProjects/vaseis 2 ergasia 3/examples/merge.h
+

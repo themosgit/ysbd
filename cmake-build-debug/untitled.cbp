@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6"/>
+	<Project>
+		<Option title="untitled"/>
+		<Option makefile_is_custom="1"/>
+		<Option compiler="gcc"/>
+		<Option virtualFolders="CMake Files\;"/>
+		<Build>
+			<Target title="all">
+				<Option working_dir="/home/a/CLionProjects/vaseis 2 ergasia 3/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/a/CLionProjects/vaseis\ 2\ ergasia\ 3/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/a/CLionProjects/vaseis\ 2\ ergasia\ 3/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/a/CLionProjects/vaseis\ 2\ ergasia\ 3/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/a/CLionProjects/vaseis\ 2\ ergasia\ 3/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="edit_cache">
+				<Option working_dir="/home/a/CLionProjects/vaseis 2 ergasia 3/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/a/CLionProjects/vaseis\ 2\ ergasia\ 3/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/a/CLionProjects/vaseis\ 2\ ergasia\ 3/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/a/CLionProjects/vaseis\ 2\ ergasia\ 3/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/a/CLionProjects/vaseis\ 2\ ergasia\ 3/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="test">
+				<Option output="/home/a/CLionProjects/vaseis 2 ergasia 3/cmake-build-debug/test" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/a/CLionProjects/vaseis 2 ergasia 3/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/home/a/CLionProjects/vaseis 2 ergasia 3/./examples"/>
+					<Add directory="/home/a/CLionProjects/vaseis 2 ergasia 3/./include"/>
+					<Add directory="/home/a/CLionProjects/vaseis 2 ergasia 3/./lib"/>
+					<Add directory="/home/a/CLionProjects/vaseis 2 ergasia 3/./src"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/9/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/a/CLionProjects/vaseis\ 2\ ergasia\ 3/cmake-build-debug/Makefile&quot;  VERBOSE=1 test"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/a/CLionProjects/vaseis\ 2\ ergasia\ 3/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/a/CLionProjects/vaseis\ 2\ ergasia\ 3/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/a/CLionProjects/vaseis\ 2\ ergasia\ 3/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="test/fast">
+				<Option output="/home/a/CLionProjects/vaseis 2 ergasia 3/cmake-build-debug/test" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/a/CLionProjects/vaseis 2 ergasia 3/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/home/a/CLionProjects/vaseis 2 ergasia 3/./examples"/>
+					<Add directory="/home/a/CLionProjects/vaseis 2 ergasia 3/./include"/>
+					<Add directory="/home/a/CLionProjects/vaseis 2 ergasia 3/./lib"/>
+					<Add directory="/home/a/CLionProjects/vaseis 2 ergasia 3/./src"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/9/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/a/CLionProjects/vaseis\ 2\ ergasia\ 3/cmake-build-debug/Makefile&quot;  VERBOSE=1 test/fast"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/a/CLionProjects/vaseis\ 2\ ergasia\ 3/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/a/CLionProjects/vaseis\ 2\ ergasia\ 3/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/a/CLionProjects/vaseis\ 2\ ergasia\ 3/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="rebuild_cache">
+				<Option working_dir="/home/a/CLionProjects/vaseis 2 ergasia 3/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/a/CLionProjects/vaseis\ 2\ ergasia\ 3/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/a/CLionProjects/vaseis\ 2\ ergasia\ 3/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/a/CLionProjects/vaseis\ 2\ ergasia\ 3/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/a/CLionProjects/vaseis\ 2\ ergasia\ 3/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="sort">
+				<Option output="/home/a/CLionProjects/vaseis 2 ergasia 3/cmake-build-debug/sort" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/a/CLionProjects/vaseis 2 ergasia 3/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/home/a/CLionProjects/vaseis 2 ergasia 3/./examples"/>
+					<Add directory="/home/a/CLionProjects/vaseis 2 ergasia 3/./include"/>
+					<Add directory="/home/a/CLionProjects/vaseis 2 ergasia 3/./lib"/>
+					<Add directory="/home/a/CLionProjects/vaseis 2 ergasia 3/./src"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/9/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/a/CLionProjects/vaseis\ 2\ ergasia\ 3/cmake-build-debug/Makefile&quot;  VERBOSE=1 sort"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/a/CLionProjects/vaseis\ 2\ ergasia\ 3/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/a/CLionProjects/vaseis\ 2\ ergasia\ 3/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/a/CLionProjects/vaseis\ 2\ ergasia\ 3/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="sort/fast">
+				<Option output="/home/a/CLionProjects/vaseis 2 ergasia 3/cmake-build-debug/sort" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/a/CLionProjects/vaseis 2 ergasia 3/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/home/a/CLionProjects/vaseis 2 ergasia 3/./examples"/>
+					<Add directory="/home/a/CLionProjects/vaseis 2 ergasia 3/./include"/>
+					<Add directory="/home/a/CLionProjects/vaseis 2 ergasia 3/./lib"/>
+					<Add directory="/home/a/CLionProjects/vaseis 2 ergasia 3/./src"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/9/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/a/CLionProjects/vaseis\ 2\ ergasia\ 3/cmake-build-debug/Makefile&quot;  VERBOSE=1 sort/fast"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/a/CLionProjects/vaseis\ 2\ ergasia\ 3/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/a/CLionProjects/vaseis\ 2\ ergasia\ 3/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/a/CLionProjects/vaseis\ 2\ ergasia\ 3/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+		</Build>
+		<Unit filename="/home/a/CLionProjects/vaseis 2 ergasia 3/examples/sort_main.c">
+			<Option target="sort"/>
+		</Unit>
+		<Unit filename="/home/a/CLionProjects/vaseis 2 ergasia 3/examples/test.c">
+			<Option target="test"/>
+		</Unit>
+		<Unit filename="/home/a/CLionProjects/vaseis 2 ergasia 3/include/bf.h">
+			<Option target="test"/>
+			<Option target="sort"/>
+		</Unit>
+		<Unit filename="/home/a/CLionProjects/vaseis 2 ergasia 3/include/chunk.h">
+			<Option target="test"/>
+			<Option target="sort"/>
+		</Unit>
+		<Unit filename="/home/a/CLionProjects/vaseis 2 ergasia 3/include/hp_file.h">
+			<Option target="test"/>
+			<Option target="sort"/>
+		</Unit>
+		<Unit filename="/home/a/CLionProjects/vaseis 2 ergasia 3/include/merge.h">
+			<Option target="test"/>
+			<Option target="sort"/>
+		</Unit>
+		<Unit filename="/home/a/CLionProjects/vaseis 2 ergasia 3/include/record.h">
+			<Option target="test"/>
+			<Option target="sort"/>
+		</Unit>
+		<Unit filename="/home/a/CLionProjects/vaseis 2 ergasia 3/include/sort.h">
+			<Option target="test"/>
+			<Option target="sort"/>
+		</Unit>
+		<Unit filename="/home/a/CLionProjects/vaseis 2 ergasia 3/lib/libbf.so">
+			<Option target="test"/>
+			<Option target="sort"/>
+		</Unit>
+		<Unit filename="/home/a/CLionProjects/vaseis 2 ergasia 3/lib/libhp_file.so">
+			<Option target="test"/>
+			<Option target="sort"/>
+		</Unit>
+		<Unit filename="/home/a/CLionProjects/vaseis 2 ergasia 3/src/chunk.c">
+			<Option target="test"/>
+			<Option target="sort"/>
+		</Unit>
+		<Unit filename="/home/a/CLionProjects/vaseis 2 ergasia 3/src/merge.c">
+			<Option target="test"/>
+			<Option target="sort"/>
+		</Unit>
+		<Unit filename="/home/a/CLionProjects/vaseis 2 ergasia 3/src/record.c">
+			<Option target="test"/>
+			<Option target="sort"/>
+		</Unit>
+		<Unit filename="/home/a/CLionProjects/vaseis 2 ergasia 3/src/sort.c">
+			<Option target="test"/>
+			<Option target="sort"/>
+		</Unit>
+		<Unit filename="/home/a/CLionProjects/vaseis 2 ergasia 3/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\"/>
+		</Unit>
+	</Project>
+</CodeBlocks_project_file>
