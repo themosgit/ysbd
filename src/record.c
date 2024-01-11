@@ -43,12 +43,23 @@ const char* cities[] = {
 };
 
 static int id = 0;
-
+//typedef struct Record {
+//    char name[15];
+//    char surname[15];
+//    char city[15];
+//    int id;
+//    char delimiter[2];
+//} Record;
 Record randomRecord(){
     Record record;
     // create a record
     record.id = id++;
     int r = rand() % 100;
+    memset(record.name,0,15);
+    memset(record.surname,0,15);
+    memset(record.city,0,15);
+    memset(record.delimiter,0,2);
+
     memcpy(record.name, names[r], strlen(names[r]) + 1);
     r = rand() % 82;    
     memcpy(record.surname, surnames[r], strlen(surnames[r]) + 1);
@@ -59,8 +70,13 @@ Record randomRecord(){
 }
 
 void printRecord(Record record){
-    printf("%d,%s,%s,%s\n",record.id,record.name,record.surname,record.city);
-
+    char name[16]= {0};
+    char surname[16]= {0};
+    char city[16]= {0};
+    strncpy(name,record.name,15);
+    strncpy(surname,record.surname,15);
+    strncpy(city,record.city,15);
+    printf("%d,%s,%s,%s%s",record.id,name,surname,city,record.delimiter);
 }
 
 
