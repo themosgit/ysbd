@@ -1,1 +1,0 @@
-/usr/bin/cc -g   CMakeFiles/sort.dir/examples/sort_main.c.o CMakeFiles/sort.dir/src/record.c.o CMakeFiles/sort.dir/src/chunk.c.o CMakeFiles/sort.dir/src/merge.c.o CMakeFiles/sort.dir/src/sort.c.o  -o sort   -L"/home/a/CLionProjects/vaseis 2 ergasia 3/lib"  -Wl,-rpath,"/home/a/CLionProjects/vaseis 2 ergasia 3/lib" -lbf -lhp_file 

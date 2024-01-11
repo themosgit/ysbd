@@ -1,1 +1,0 @@
-/usr/bin/cc -g   CMakeFiles/test.dir/examples/test.c.o CMakeFiles/test.dir/src/record.c.o CMakeFiles/test.dir/src/chunk.c.o CMakeFiles/test.dir/src/merge.c.o CMakeFiles/test.dir/src/sort.c.o  -o test   -L"/home/a/CLionProjects/vaseis 2 ergasia 3/lib"  -Wl,-rpath,"/home/a/CLionProjects/vaseis 2 ergasia 3/lib" -lbf -lhp_file 
